@@ -5,7 +5,7 @@ namespace MinimalApi.DataAccess
 {
     public class CustomerRepository : IRepository
     {
-        private List<Customer> _customerList;
+        private readonly List<Customer> _customerList;
 
         public CustomerRepository()
         {
