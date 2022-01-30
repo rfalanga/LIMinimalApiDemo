@@ -20,5 +20,17 @@ namespace MinimalApi.DataAccess
         {
             return _customerList;
         }
+
+        public Customer GetCustomerById(int id)
+        {
+            var result =  _customerList.SingleOrDefault(c => c.Id == id);
+
+            if (result == null)
+            {
+                return new Customer();
+            }
+
+            return result;
+        }
     }
 }

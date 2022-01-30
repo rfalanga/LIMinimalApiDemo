@@ -10,5 +10,7 @@ namespace MinimalApi.DataAccess.Interfaces
     public interface IRepository
     {
         public List<Customer> GetAllCustomers();
+
+        public Customer GetCustomerById(int id);
     }
 }
