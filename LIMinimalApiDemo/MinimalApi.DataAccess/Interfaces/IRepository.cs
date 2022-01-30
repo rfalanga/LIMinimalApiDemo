@@ -9,6 +9,6 @@ namespace MinimalApi.DataAccess.Interfaces
 {
     public interface IRepository
     {
-        public List<Customer> GetAllCustomers();
+        public List<Customer> GetAllCustomers(IRepository repository);
     }
 }

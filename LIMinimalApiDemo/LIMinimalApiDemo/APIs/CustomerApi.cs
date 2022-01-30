@@ -1,4 +1,4 @@
-﻿using MinimalApi.Model;
+﻿using MinimalApi.DataAccess.Interfaces;
 
 namespace LIMinimalApiDemo.APIs
 {
@@ -9,16 +9,11 @@ namespace LIMinimalApiDemo.APIs
             application.MapGet("/customers", GetAllCustomers);
         }
 
-        public static IResult GetAllCustomers()
+        public static IResult GetAllCustomers(IRepository repository)
         {
-            //var customers = new List<Customer>
-            //{
-            //    new Customer { Id = 1, FirstName = "George", LastName = "Jones", Age = 70 },
-            //    new Customer { Id = 2, FirstName = "Bill", LastName = "Smith", Age = 50 },
-            //    new Customer { Id = 3, FirstName = "Juanita", LastName = "Lopez", Age = 35 }
-            //};
+            var customers = repository.GetAllCustomers();
 
-            //return Results.Ok(customers);
+            return Results.Ok(customers);
         }
     }
 }
