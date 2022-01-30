@@ -9,7 +9,7 @@ namespace LIMinimalApiDemo.APIs
             application.MapGet("/customers", GetAllCustomers);
         }
 
-        private static IResult GetAllCustomers()
+        public static IResult GetAllCustomers()
         {
             var customers = new List<Customer>
             {
