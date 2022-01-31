@@ -9,6 +9,7 @@ namespace LIMinimalApiDemo.APIs
         {
             application.MapGet("/customers", GetAllCustomers);
             application.MapGet("/customers/{id}", GetCustomerById);
+            application.MapDelete("/customer", DeleteCustomer);
         }
 
         public static IResult GetAllCustomers(IRepository repository)
@@ -32,5 +33,13 @@ namespace LIMinimalApiDemo.APIs
             //this return value will return the newly added customer - note: that's not done
             return Results.Created($"/customers/{customer.Id}", customer);
         }
+        public static IResult DeleteCustomer(int customerId)
+        {
+            //Same thing here as in the SaveCustomer method. The author only shows the barebones part of
+            //deleting a customer, without actually deleting the customer from the repository.
+
+            return Results.Accepted();
+        }
+
     }
 }
