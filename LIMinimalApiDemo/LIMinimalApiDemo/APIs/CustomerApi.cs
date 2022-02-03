@@ -13,9 +13,11 @@ namespace LIMinimalApiDemo.APIs
             application.MapPut("/customer", UpdateCustomer);
         }
 
-        private static Task UpdateCustomer(HttpContext context)
+        private static IResult UpdateCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            //Update logic goes here (this is how it is displayed on the blog site)
+
+            return Results.Ok();
         }
 
         public static IResult GetAllCustomers(IRepository repository)
