@@ -12,5 +12,7 @@ namespace MinimalApi.DataAccess.Interfaces
         public List<Customer> GetAllCustomers();
 
         public Customer GetCustomerById(int id);
+
+        public Customer? UpdateCustomer(Customer customer);
     }
 }

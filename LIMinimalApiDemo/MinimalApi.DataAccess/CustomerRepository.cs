@@ -32,5 +32,20 @@ namespace MinimalApi.DataAccess
 
             return result;
         }
+
+        //This method was not in the blog post; I've added it
+        public Customer? UpdateCustomer(Customer customer)
+        {
+            //first, look for customer
+            var customerFound = _customerList.FirstOrDefault(c => c.Id == customer.Id);
+            if (customerFound == null)
+            { return null; }
+
+            customerFound.FirstName = customer.FirstName;
+            customerFound.LastName = customer.LastName;
+            customerFound.Age = customer.Age;
+
+            return customerFound;
+        }
     }
 }

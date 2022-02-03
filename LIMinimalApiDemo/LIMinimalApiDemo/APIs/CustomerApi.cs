@@ -11,11 +11,20 @@ namespace LIMinimalApiDemo.APIs
             application.MapGet("/customers/{id}", GetCustomerById);
             application.MapDelete("/customer", DeleteCustomer);
             application.MapPut("/customer", UpdateCustomer);
+
+            //the rest were not in the blog post; I've added them
         }
 
-        private static IResult UpdateCustomer(Customer customer)
+        private static IResult UpdateCustomer(Customer customer, IRepository repository)
         {
             //Update logic goes here (this is how it is displayed on the blog site)
+
+            //Now I'm adding logic to handle the update; this wasn't in the blog post
+            var customerResult = repository.UpdateCustomer(customer);
+            if (customerResult == null)
+            {
+                return Results.NotFound();
+            }
 
             return Results.Ok();
         }
