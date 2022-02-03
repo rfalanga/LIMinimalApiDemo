@@ -10,6 +10,12 @@ namespace LIMinimalApiDemo.APIs
             application.MapGet("/customers", GetAllCustomers);
             application.MapGet("/customers/{id}", GetCustomerById);
             application.MapDelete("/customer", DeleteCustomer);
+            application.MapPut("/customer", UpdateCustomer);
+        }
+
+        private static Task UpdateCustomer(HttpContext context)
+        {
+            throw new NotImplementedException();
         }
 
         public static IResult GetAllCustomers(IRepository repository)
