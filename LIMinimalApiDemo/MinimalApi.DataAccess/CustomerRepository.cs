@@ -16,6 +16,23 @@ namespace MinimalApi.DataAccess
                 new Customer { Id = 3, FirstName = "Juanita", LastName = "Lopez", Age = 35 }
             };
         }
+
+        public bool DeleteCustomerById(int id)
+        {
+            try
+            {
+                var customer = _customerList.FirstOrDefault(c => c.Id == id);
+                if (customer == null)
+                    return false;
+                _customerList.Remove(customer);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         public List<Customer> GetAllCustomers()
         {
             return _customerList;

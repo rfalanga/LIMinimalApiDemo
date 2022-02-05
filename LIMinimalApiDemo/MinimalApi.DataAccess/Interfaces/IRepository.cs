@@ -14,5 +14,7 @@ namespace MinimalApi.DataAccess.Interfaces
         public Customer GetCustomerById(int id);
 
         public Customer? UpdateCustomer(Customer customer);
+
+        public bool DeleteCustomerById(int id);
     }
 }
