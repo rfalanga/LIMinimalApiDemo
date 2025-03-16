@@ -14,6 +14,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      SOLUTION_PATH: ./LIMinimalApiDemo/LIMinimalApiDemo.sln
+
     steps:
     - uses: actions/checkout@v4
     - name: Setup .NET
@@ -21,8 +24,8 @@ jobs:
       with:
         dotnet-version: 9.0.x
     - name: Restore dependencies
-      run: dotnet restore ./LIMinimalApiDemo/LIMinimalApiDemo.sln
+      run: dotnet restore ${{ env.SOLUTION_PATH }}
     - name: Build
-      run: dotnet build --no-restore ./LIMinimalApiDemo/LIMinimalApiDemo.sln
+      run: dotnet build --no-restore ${{ env.SOLUTION_PATH }}
     - name: Test
-      run: dotnet test --no-build --verbosity normal ./LIMinimalApiDemo/LIMinimalApiDemo.sln # I need to put this into a variable, but I just want to get it working first
+      run: dotnet test --no-build --verbosity normal ${{ env.SOLUTION_PATH }}
