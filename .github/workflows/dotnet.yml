@@ -25,4 +25,4 @@ jobs:
     - name: Build
       run: dotnet build --no-restore ./LIMinimalApiDemo/LIMinimalApiDemo.sln
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal ./LIMinimalApiDemo/LIMinimalApiDemo.sln # I need to put this into a variable, but I just want to get it working first
