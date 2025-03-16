@@ -21,7 +21,7 @@ jobs:
       with:
         dotnet-version: 9.0.x
     - name: Restore dependencies
-      run: dotnet restore LIMinimalApiDemo/LIMinimalApiDemo.sln
+      run: dotnet restore ./LIMinimalApiDemo/LIMinimalApiDemo.sln
     - name: Build
       run: dotnet build --no-restore
     - name: Test
