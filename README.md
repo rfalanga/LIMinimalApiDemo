@@ -15,3 +15,7 @@ However, on 3/15/2025 I converted this project to .NET 9.
 ### This is a LinkedIn article
 
 On my laptop I've put this into a folder for LinkedIn Learning. Technically, this project is not from a LinkedIn Learning course. This is from an article on LinkedIn, publisched back in 2022. I'm just putting under my LinkedIn Learning folder on my laptop, because I don't want to bother creating another folder for LinkedIn articles.
+
+## Adding a GitHub Action
+
+On 3/15/2025 I added a GitHub Action to this project. The action is triggered on push and pull requests to the main branch.
