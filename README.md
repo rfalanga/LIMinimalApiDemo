@@ -1,5 +1,7 @@
 # LIMinimalApiDemo
 
+[![.NET GitHub Workflow Template on main](https://github.com/rfalanga/LIMinimalApiDemo/actions/workflows/dotnet.yml/badge.svg)](https://github.com/rfalanga/LIMinimalApiDemo/actions/workflows/dotnet.yml)
+
 Project developed following a demo on Minimal API on LinkedIn
 
 ## The source for this demo
